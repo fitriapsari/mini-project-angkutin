@@ -1,0 +1,128 @@
+/* Styling for the form container */
+form {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 80px;
+  max-width: 600px;
+  background: #f7f7f7;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+}
+
+/* Styling for form labels */
+form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+/* Styling for text inputs and textareas */
+form input[type="text"],
+form input[type="tel"],
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Styling for the submit button */
+form button {
+  background: #007BFF;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Styling for the select input */
+form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: white;
+}
+
+/* Styling for checkbox and link (remember me and forgot password) */
+form .form-check input[type="checkbox"],
+form a {
+  margin-top: 10px;
+}
+
+/* Centering the text */
+.text-center {
+  text-align: center;
+}
+
+/* Additional styling for links (e.g., "Not a member? Register") */
+a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Tabel */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Header Tabel */
+th {
+  background-color: #f2f2f2;
+  color: #333;
+  text-align: left;
+  font-weight: bold;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+}
+
+/* Sel Tabel */
+td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+}
+
+/* Warna Baris Bergantian */
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Tombol Edit & Hapus */
+td:last-child {
+  text-align: center;
+}
+
+/* Tombol Edit */
+.edit-button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 8px 10px;
+  cursor: pointer;
+}
+
+/* Tombol Hapus */
+.delete-button {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 8px 10px;
+  cursor: pointer;
+}
+
+/* Hover Tombol */
+.edit-button:hover,
+.delete-button:hover {
+  opacity: 0.8;
+}

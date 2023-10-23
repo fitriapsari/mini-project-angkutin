@@ -1,0 +1,22 @@
+.about-us-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+  background-color: blue;
+}
+
+.about-us-content {
+  /* flex: 1; */
+  margin-left: 50px;
+  text-align: justify;
+  color: #ffff;
+}
+
+.about-us-image img {
+  max-width: 100%;
+  height: auto;
+  margin-left: 100px;
+
+}

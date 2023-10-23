@@ -1,9 +1,9 @@
-#root {
+/* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-}
+} */
 
 .logo {
   height: 6em;
@@ -11,9 +11,11 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -22,6 +24,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -39,4 +42,540 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.banner1 {
+  /* background-image: url(002.jpg); */
+  height: 600px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  /* margin-top: 151px; */
+}
+
+.banner2 {
+  height: 570px;
+  width: 100%;
+  position: relative;
+  margin-top: 80px;
+}
+
+.banner3 {
+  height: 465px;
+  width: 100%;
+  position: relative;
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.bubble {
+  width: 50%;
+  height: 600px;
+  background-color: blue;
+  border-radius: 0px 300px 300px 0px;
+}
+
+.bubble2 {
+  position: absolute;
+  width: 50%;
+  height: 500px;
+  background-color: blue;
+  border-radius: 300px 100px 100px 300px;
+  right: 10%;
+}
+
+.bubbledesc {
+  width: 80%;
+  padding-top: 115px;
+  padding-left: 80px;
+}
+
+.bannerdesc {
+  width: 30%;
+  margin-top: 50px;
+}
+
+.bubble h1 {
+  font-size: 45px;
+  color: white;
+  padding-bottom: 20px;
+  line-height: 55px;
+}
+
+.bubble2 h1 {
+  font-size: 38px;
+  color: white;
+  text-align: right;
+  margin-top: -10px;
+}
+
+.banner3 h1 {
+  font-size: 45px;
+  color: black;
+  line-height: 55px;
+}
+
+.bubble h3 {
+  font-size: 25px;
+  color: white;
+  padding-bottom: 15px;
+}
+
+.bubble h2 {
+  font-family: 'Maison Neue Extended';
+  font-size: 32px;
+  font-style: oblique;
+  color: #FFBD22;
+}
+
+.bubble2 p {
+  font-size: 20px;
+  color: white;
+  line-height: 28px;
+  margin-left: 80px;
+  text-align: justify;
+}
+
+.banner3 p {
+  font-size: 28px;
+  color: black;
+  line-height: 35px;
+}
+
+.banner3 span {
+  color: #D50000;
+}
+
+.banner1 img {
+  height: 600px;
+  position: static;
+  top: 0;
+  right: 0;
+  /* padding: 50px; */
+  border-radius: 30px;
+  /* margin-left: 150px; */
+  /* z-index: -1; */
+}
+
+.banner2 img {
+  height: 500px;
+  position: absolute;
+  top: 0;
+  left: 10%;
+  /* z-index: -1; */
+  border-radius: 100px 0 0 100px;
+}
+
+.banner3 img {
+  height: 400px;
+  margin-right: 80px;
+}
+
+.bubblesmall {
+  height: 90px;
+  width: 180px;
+  background-color: #FFBD22;
+  position: absolute;
+  bottom: 20px;
+  left: 450px;
+  border-radius: 100px 100px 0 0;
+}
+
+.bubblesmall2 {
+  height: 90px;
+  width: 180px;
+  background-color: #FFBD22;
+  position: absolute;
+  top: 0;
+  left: 700px;
+  border-radius: 0 0 100px 100px;
+}
+
+.one {
+  width: 100%;
+}
+
+@media (max-width:425px) {
+  .banner1 {
+    height: 400px;
+    width: 100%;
+    position: relative;
+    margin-top: 151px;
+  }
+
+  .banner2 {
+    height: 570px;
+    width: 100%;
+    position: relative;
+    margin-top: 80px;
+  }
+
+  .banner3 {
+    height: 500px;
+    width: 100%;
+    position: relative;
+    margin-top: 80px;
+    display: inline-block;
+  }
+
+  .bubble {
+    width: 100%;
+    height: 400px;
+    background-color: #D50000;
+    border-radius: 40px 40px 0 0;
+    margin-top: 280px;
+  }
+
+  .bubble2 {
+    position: absolute;
+    width: 340px;
+    height: 400px;
+    background-color: #D50000;
+    border-radius: 300px 100px 100px 300px;
+    bottom: 0;
+  }
+
+  .bubbledesc {
+    width: 80%;
+    padding-top: 45px;
+    padding-left: 50px;
+  }
+
+  .bannerdesc {
+    width: 80%;
+    margin-top: 0;
+    text-align: center;
+    margin-left: 40px;
+  }
+
+  .bubble h1 {
+    font-size: 28px;
+    color: white;
+    padding-bottom: 90px;
+    line-height: 35px;
+  }
+
+  .bubble2 h1 {
+    font-size: 30px;
+    color: white;
+    text-align: right;
+    margin-top: -20px;
+  }
+
+  .banner3 h1 {
+    font-size: 23px;
+    color: black;
+    line-height: 20px;
+  }
+
+  .bubble h3 {
+    font-size: 20px;
+    color: white;
+    padding-bottom: 15px;
+  }
+
+  .bubble h2 {
+    font-family: 'Maison Neue Extended';
+    font-size: 24px;
+    font-style: oblique;
+    color: #FFBD22;
+  }
+
+  .bubble2 p {
+    font-size: 18px;
+    color: white;
+    line-height: 18px;
+    margin-left: 10px;
+    text-align: right;
+  }
+
+  .banner3 p {
+    font-size: 17px;
+    color: black;
+    line-height: 17px;
+  }
+
+  .banner3 span {
+    color: #D50000;
+  }
+
+  .banner1 img {
+    width: 100%;
+    height: 210px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    margin-top: -170px;
+  }
+
+  .banner2 img {
+    height: 210px;
+    position: absolute;
+    top: 0;
+    left: 10%;
+    z-index: -1;
+    border-radius: 100px 200px 0 100px;
+  }
+
+  .banner3 img {
+    height: 300px;
+    margin-left: 100px;
+  }
+
+  .bubblesmall {
+    display: none;
+  }
+
+  .bubblesmall2 {
+    display: none;
+  }
+
+  .one {
+    width: 100%;
+  }
+
+  .footerAngkutaja {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    background-color: #101820;
+  }
+
+  .footerAngkutaja p {
+    color: white;
+  }
+}
+
+/* 
+//Footer */
+.footer-container {
+  padding: 24px 92px;
+  padding-top: 42px;
+  background-color: #191717;
+}
+
+.footer-contents {
+  display: flex;
+  justify-content: center;
+  color: whitesmoke;
+  gap: 6rem;
+}
+
+.content {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.footer-title {
+  color: #0000FF;
+  font-size: 22px;
+  margin-bottom: 2rem;
+}
+
+.isiAboutUs {
+  font-size: 16px;
+  margin-bottom: 1rem;
+}
+
+
+.footer-line {
+  margin: 2rem 0;
+}
+
+.footerCinema {
+  color: #ffff;
+}
+
+.google-icon {
+  width: 25px;
+  height: 25px;
+}
+
+.input-group-text {
+  position: relative;
+  width: 550px;
+  top: 80px;
+  left: 35px;
+}
+
+#google {
+  position: relative;
+  top: 20px;
+  left: -10px;
+}
+
+.group {
+  position: relative;
+  top: 80px;
+}
+
+h3 {
+  position: relative;
+  left: 35px;
+  top: 10px;
+  color: var(--5, #000);
+  text-align: left;
+  /* H3 */
+  font-size: 15px;
+  font-family: Plus Jakarta Sans;
+  font-weight: 600;
+  line-height: 28px;
+}
+
+.line {
+  position: relative;
+  top: 25px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sign {
+  position: absolute;
+  top: 380px;
+  left: 200px;
+
+}
+
+#box {
+  position: relative;
+  top: 150px;
+}
+
+#sub {
+  position: absolute;
+  top: 430px;
+  left: 50px;
+}
+
+.btn-primary {
+  width: 550px;
+  height: 48px;
+  border-radius: 8px;
+  background: #343530;
+}
+
+h2 {
+  color: #000;
+  /* H2 */
+  font-size: 32px;
+  font-family: Plus Jakarta Sans;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.input-group {
+  font-size: 16px;
+  font-family: Plus Jakarta Sans;
+  line-height: 20px;
+}
+
+.or {
+  color: var(--6, rgba(43, 43, 43, 0.30));
+  text-align: center;
+  /* Body 1 */
+  font-size: 16px;
+  font-family: Plus Jakarta Sans;
+  opacity: 0.9;
+}
+
+.flex-nowrap {
+  width: 550px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  border: 1px solid var(--6, rgba(43, 43, 43, 0.30));
+  left: 35px;
+}
+
+hr {
+  position: relative;
+  left: 20px;
+  width: 140px;
+  height: 1px;
+  opacity: 0.3;
+}
+
+.in-rec {
+  display: flex;
+  position: absolute;
+  width: 630px;
+  height: 630px;
+  flex-shrink: 0;
+  top: 40px;
+  left: 40px;
+}
+
+.logo {
+  position: absolute;
+  width: 114px;
+  height: 43px;
+  flex-shrink: 0;
+  top: 30px;
+  left: 104px;
+}
+
+.rectangle {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  top: 105px;
+  left: 25px;
+  flex-shrink: 0;
+  border-radius: 50px 0px;
+  /* background: #343530; */
+}
+
+.services-container {
+  text-align: center;
+  margin: 50px;
+}
+
+.section-heading {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.section-subheading {
+  font-size: 18px;
+  margin-bottom: 50px;
+}
+
+.services-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.service {
+  flex: 1;
+  margin-right: 50px;
+}
+
+.card {
+  border: none;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-text {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-top: 20px;
 }
