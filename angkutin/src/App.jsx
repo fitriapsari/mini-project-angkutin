@@ -1,34 +1,43 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react"
+import reactLogo from "./assets/react.svg"
+import viteLogo from "/vite.svg"
+import "./App.css"
+import Navbar from "./components/Navbar/Navbar"
+import "bootstrap/dist/css/bootstrap.min.css"
+import "bootstrap/dist/js/bootstrap.bundle.min"
+import Welcome from "./components/Welcome/Welcome"
+import Footer from "./components/Footer/Footer"
+import Login from "../src/pages/Login/Login"
+import OrderForm from "./pages/Order/Order"
+// import OrderTable from "./pages/Detail/Detail"
+import LandingPage from "./pages/LandingPage/LandingPage"
+import CreateAccount from "./pages/Create/Create"
+import AboutUs from "./components/AboutUS/AboutUs"
+import Services from "./components/Service/Service"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div>
+      <Router>
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<CreateAccount />} />
+          <Route path="/about" element={<AboutUs />} />
+          <Route path="/service" element={<Services />} />
+          <Route path="/order-form" element={<OrderForm />} />
+        </Routes>
+      </Router>
+      {/* <CreateAccount /> */}
+      {/* <Navbar />
+      <Welcome />
+      <Footer /> */}
+      {/* <Login />
+      <OrderForm /> */}
+      {/* <OrderTable /> */}
+      {/* <LandingPage /> */}
+    </div>
   )
 }
 

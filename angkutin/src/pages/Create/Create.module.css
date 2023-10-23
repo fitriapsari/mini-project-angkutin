@@ -1,0 +1,142 @@
+ .google-icon {
+   width: 25px;
+   height: 25px;
+ }
+
+ .input-group-text {
+   position: relative;
+   width: 550px;
+   top: 80px;
+   left: 35px;
+ }
+
+ #google {
+   position: relative;
+   top: 20px;
+   left: -10px;
+ }
+
+ .group {
+   position: relative;
+   top: 80px;
+ }
+
+ h3 {
+   position: relative;
+   left: 35px;
+   top: 10px;
+   color: var(--5, #000);
+   text-align: left;
+   /* H3 */
+   font-size: 15px;
+   font-family: Plus Jakarta Sans;
+   font-weight: 600;
+   line-height: 28px;
+ }
+
+ .line {
+   position: relative;
+   top: 25px;
+ }
+
+ ul {
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+ }
+
+ .sign {
+   position: absolute;
+   top: 380px;
+   left: 200px;
+
+ }
+
+ #box {
+   position: relative;
+   top: 150px;
+ }
+
+ #sub {
+   position: absolute;
+   top: 430px;
+   left: 50px;
+ }
+
+ .btn-primary {
+   width: 550px;
+   height: 48px;
+   border-radius: 8px;
+   background: #343530;
+ }
+
+ h2 {
+   color: #000;
+   /* H2 */
+   font-size: 32px;
+   font-family: Plus Jakarta Sans;
+   font-weight: 700;
+   line-height: 32px;
+ }
+
+ .input-group {
+   font-size: 16px;
+   font-family: Plus Jakarta Sans;
+   line-height: 20px;
+ }
+
+ .or {
+   color: var(--6, rgba(43, 43, 43, 0.30));
+   text-align: center;
+   /* Body 1 */
+   font-size: 16px;
+   font-family: Plus Jakarta Sans;
+   opacity: 0.9;
+ }
+
+ .flex-nowrap {
+   width: 550px;
+   height: 48px;
+   flex-shrink: 0;
+   border-radius: 8px;
+   border: 1px solid var(--6, rgba(43, 43, 43, 0.30));
+   left: 35px;
+ }
+
+ hr {
+   position: relative;
+   left: 20px;
+   width: 140px;
+   height: 1px;
+   opacity: 0.3;
+ }
+
+ .in-rec {
+   display: flex;
+   position: absolute;
+   width: 330px;
+   height: 330px;
+   flex-shrink: 0;
+   top: 40px;
+   left: 40px;
+ }
+
+ .logo {
+   position: absolute;
+   width: 114px;
+   height: 43px;
+   flex-shrink: 0;
+   top: 30px;
+   left: 104px;
+ }
+
+ .rectangle {
+   position: absolute;
+   width: 600px;
+   height: 600px;
+   top: 105px;
+   left: 104px;
+   flex-shrink: 0;
+   border-radius: 50px 0px;
+   background: #343530;
+ }
