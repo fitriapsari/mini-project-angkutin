@@ -335,19 +335,6 @@
   .one {
     width: 100%;
   }
-
-  .footerAngkutaja {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px;
-    width: 100%;
-    background-color: #101820;
-  }
-
-  .footerAngkutaja p {
-    color: white;
-  }
 }
 
 /* 
@@ -446,7 +433,7 @@ ul {
 
 #box {
   position: relative;
-  top: 150px;
+  /* top: 150px; */
 }
 
 #sub {

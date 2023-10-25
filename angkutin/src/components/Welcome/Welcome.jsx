@@ -52,9 +52,6 @@ const Angkutin = () => {
           </p>
         </div>
       </div>
-      {/* <div className="footerAngkutaja">
-        <p>&copy; 2023 angkutin.</p>
-      </div> */}
     </div>
   )
 }

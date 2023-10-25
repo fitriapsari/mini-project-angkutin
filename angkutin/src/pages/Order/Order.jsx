@@ -1,7 +1,10 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import "./OrderForm.module.css"
 import Navbar from "../../components/Navbar/Navbar"
 import { useNavigate } from "react-router-dom"
+import { fetchOrders, postOrder, editOrder, deleteOrder } from "../../api/index"
+import data from "../../api/data"
+import { Link } from "react-router-dom"
 
 const OrderForm = () => {
   const navigate = useNavigate()
@@ -15,7 +18,19 @@ const OrderForm = () => {
     jarakTempuh: "",
   })
 
-  const [orders, setOrders] = useState([]) // State untuk menyimpan pesanan
+  // State untuk menyimpan pesanan
+  const [orders, setOrders] = useState([])
+
+  // useEffect(() => {
+  //   fetchOrders()
+  //     .then((data) => {
+  //       setOrders(data)
+  //     })
+  //     .catch((error) => {
+  //       console.error("Gagal mengambil data pesanan: ", error)
+  //     })
+  // }, [])
+  // console.log(data)
 
   const handleInputChange = (e) => {
     const { name, value } = e.target
@@ -28,28 +43,41 @@ const OrderForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    // Munculkan notifikasi konfirmasi
+    // notifikasi konfirmasi
     const isConfirmed = window.confirm(
       "Apakah Anda yakin ingin memesan jasa angkut?"
     )
 
     if (isConfirmed) {
-      // Menggabungkan pesanan baru ke dalam state orders
-      setOrders([...orders, orderForm])
+      // Mengirim data pesanan ke API
+      postOrder(orderForm)
+        .then((data) => {
+          fetchOrders()
+            .then((data) => {
+              setOrders(data)
+            })
+            .catch((error) => {
+              console.error("Gagal mengambil data pesanan: ", error)
+            })
 
-      // Reset form setelah submit
-      setOrderForm({
-        nama: "",
-        telepon: "",
-        alamatPenjemputan: "",
-        alamatTujuan: "",
-        tanggalJemput: "",
-        jenisLayanan: "",
-        jarakTempuh: "",
-      })
+          // Reset form
+          setOrderForm({
+            nama: "",
+            telepon: "",
+            alamatPenjemputan: "",
+            alamatTujuan: "",
+            tanggalJemput: "",
+            jenisLayanan: "",
+            jarakTempuh: "",
+          })
+        })
+        .catch((error) => {
+          console.error("Gagal menambahkan data pesanan: ", error)
+        })
     } else {
-      // Tidak melakukan apa-apa jika pengguna membatalkan
+      // tidak ada action
     }
+
     navigate("/order-form")
   }
 
@@ -57,6 +85,7 @@ const OrderForm = () => {
     <div>
       <Navbar />
       <h2>Form Pemesanan Jasa Angkut</h2>
+      <Link to="/detail-order">Detail Order</Link>
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="nama">Nama:</label>
@@ -106,18 +135,6 @@ const OrderForm = () => {
             required
           />
         </div>
-        {/* <div>
-          <label htmlFor="jenisPengangkutan">Jenis Pengangkutan:</label>
-          <select
-            name="jenisPengangkutan"
-            value={orderForm.jenisPengangkutan}
-            onChange={handleInputChange}
-            required
-          >
-            <option value="pindahan">Pindahan</option>
-            <option value="barang">Barang</option>
-          </select>
-        </div> */}
         <div>
           <label htmlFor="jenisLayanan">Jenis Layanan:</label>
           <select
@@ -132,13 +149,6 @@ const OrderForm = () => {
             <option value="Packing">Packing</option>
             <option value="Storage">Storage</option>
           </select>
-          {/* <input
-            type="text"
-            name="jenisMobil"
-            value={orderForm.jenisMobil}
-            onChange={handleInputChange}
-            required
-          /> */}
         </div>
         <div>
           <label htmlFor="jarakTempuh">Jarak Tempuh (KM):</label>
@@ -152,35 +162,8 @@ const OrderForm = () => {
         </div>
         <br />
         <button type="submit">Pesan Jasa Angkut</button>
+        {/* <button>List Order</button> */}
       </form>
-
-      {/* Tabel untuk menampilkan hasil inputan pengguna */}
-      <table>
-        <thead>
-          <tr>
-            <th>Nama</th>
-            <th>Nomor Telepon</th>
-            <th>Alamat Penjemputan</th>
-            <th>Alamat Tujuan</th>
-            <th>Tanggal Jemput</th>
-            <th>Jenis Layanan</th>
-            <th>Jarak Tempuh (KM)</th>
-          </tr>
-        </thead>
-        <tbody>
-          {orders.map((order, index) => (
-            <tr key={index}>
-              <td>{order.nama}</td>
-              <td>{order.telepon}</td>
-              <td>{order.alamatPenjemputan}</td>
-              <td>{order.alamatTujuan}</td>
-              <td>{order.tanggalJemput}</td>
-              <td>{order.jenisLayanan}</td>
-              <td>{order.jarakTempuh}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
     </div>
   )
 }

@@ -12,9 +12,10 @@ import OrderForm from "./pages/Order/Order"
 // import OrderTable from "./pages/Detail/Detail"
 import LandingPage from "./pages/LandingPage/LandingPage"
 import CreateAccount from "./pages/Create/Create"
-import AboutUs from "./components/AboutUS/AboutUs"
-import Services from "./components/Service/Service"
+import AboutUs from "./pages/AboutUS/AboutUs"
+import Services from "./pages/Service/Service"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import DetailOrder from "./pages/Detail/Detail"
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="/about" element={<AboutUs />} />
           <Route path="/service" element={<Services />} />
           <Route path="/order-form" element={<OrderForm />} />
+          <Route path="/detail-order" element={<DetailOrder />} />
         </Routes>
       </Router>
       {/* <CreateAccount /> */}
