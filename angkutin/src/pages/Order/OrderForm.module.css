@@ -1,8 +1,7 @@
-/* Styling for the form container */
 form {
   width: 80%;
   margin: 0 auto;
-  margin-top: 80px;
+  margin-top: 20px;
   max-width: 600px;
   background: #f7f7f7;
   padding: 20px;
@@ -10,14 +9,36 @@ form {
   border-radius: 5px;
 }
 
-/* Styling for form labels */
+h2 {
+  margin-top: 70px;
+  text-align: center;
+}
+
+button detail {
+  margin-top: 80px;
+  margin-left: 50px;
+  background-color: #3498db;
+}
+
+h3 {
+  margin-left: 50px;
+  margin-top: 30px;
+  font-size: 18px;
+  text-align: right;
+}
+
+/* button {
+  margin-top: 80px;
+  margin-left: 50px;
+  background-color: #3498db;
+} */
+
 form label {
   display: block;
   margin-bottom: 8px;
   font-weight: bold;
 }
 
-/* Styling for text inputs and textareas */
 form input[type="text"],
 form input[type="tel"],
 form textarea {
@@ -28,7 +49,6 @@ form textarea {
   border-radius: 4px;
 }
 
-/* Styling for the submit button */
 form button {
   background: #007BFF;
   color: #fff;
@@ -38,7 +58,6 @@ form button {
   cursor: pointer;
 }
 
-/* Styling for the select input */
 form select {
   width: 100%;
   padding: 10px;
@@ -48,18 +67,15 @@ form select {
   background: white;
 }
 
-/* Styling for checkbox and link (remember me and forgot password) */
 form .form-check input[type="checkbox"],
 form a {
   margin-top: 10px;
 }
 
-/* Centering the text */
 .text-center {
   text-align: center;
 }
 
-/* Additional styling for links (e.g., "Not a member? Register") */
 a {
   color: #007BFF;
   text-decoration: none;
@@ -69,41 +85,36 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Tabel */
 table {
-  width: 100%;
+  width: 90%;
   border-collapse: collapse;
-  margin: 1em 0;
+  margin: 1em 1em;
   font-family: Arial, sans-serif;
+  margin-left: 70px;
 }
 
-/* Header Tabel */
 th {
   background-color: #f2f2f2;
   color: #333;
-  text-align: left;
+  text-align: center;
   font-weight: bold;
   padding: 12px 15px;
   border: 1px solid #ddd;
 }
 
-/* Sel Tabel */
 td {
   padding: 12px 15px;
   border: 1px solid #ddd;
 }
 
-/* Warna Baris Bergantian */
 tr:nth-child(even) {
   background-color: #f2f2f2;
 }
 
-/* Tombol Edit & Hapus */
 td:last-child {
   text-align: center;
 }
 
-/* Tombol Edit */
 .edit-button {
   background-color: #3498db;
   color: #fff;
@@ -112,7 +123,6 @@ td:last-child {
   cursor: pointer;
 }
 
-/* Tombol Hapus */
 .delete-button {
   background-color: #e74c3c;
   color: #fff;
@@ -121,7 +131,6 @@ td:last-child {
   cursor: pointer;
 }
 
-/* Hover Tombol */
 .edit-button:hover,
 .delete-button:hover {
   opacity: 0.8;

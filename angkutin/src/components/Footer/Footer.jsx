@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="footer-contents">
           <div className="content">
             <h1 className="footer-title">Angkutin</h1>
-            <p className="isiRealCinema">
+            <p className="isiAngkutin">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet
               eaque harum cum ea blanditiis ex molestias officiis
             </p>
@@ -37,14 +37,12 @@ const Footer = () => {
           </div>
           <div className="content">
             <h6 className="footer-title">Contact</h6>
-            <p className="text-light">4043 N</p>
-            <p className="text-light">Ravenswood Ave</p>
-            <p className="text-light">Suite 316</p>
-            <p className="text-light">Chicago, IL, 60613</p>
+            <p className="text-light">Ruko Emerald blok F1 Meteseh</p>
+            <p className="text-light">Tembalang</p>
+            <p className="text-light">Semarang</p>
             <p>
               <a href="" className="text-primary">
-                {" "}
-                (773) 348-4581
+                (+62) 852-458-337
               </a>
             </p>
           </div>
@@ -62,7 +60,7 @@ const Footer = () => {
               <a href="#">Support</a>
             </li>
           </ul>
-          <p className="footerCinema">©2023 Angkutin</p>
+          <p className="footerCinema"> ©2023 Angkutin</p>
         </div>
       </section>
     </footer>
