@@ -16,6 +16,7 @@ import AboutUs from "./pages/AboutUS/AboutUs"
 import Services from "./pages/Service/Service"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import DetailOrder from "./pages/Detail/Detail"
+import EditOrder from "./pages/Edit/Edit"
 
 function App() {
   return (
@@ -29,16 +30,9 @@ function App() {
           <Route path="/service" element={<Services />} />
           <Route path="/order-form" element={<OrderForm />} />
           <Route path="/detail-order" element={<DetailOrder />} />
+          <Route path="/edit/:id" element={<EditOrder />} />
         </Routes>
       </Router>
-      {/* <CreateAccount /> */}
-      {/* <Navbar />
-      <Welcome />
-      <Footer /> */}
-      {/* <Login />
-      <OrderForm /> */}
-      {/* <OrderTable /> */}
-      {/* <LandingPage /> */}
     </div>
   )
 }
