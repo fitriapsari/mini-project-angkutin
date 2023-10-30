@@ -50,6 +50,11 @@ function Navbar() {
                   Service
                 </Link>
               </li>
+              <li className="nav-item">
+                <Link to="/chatAI" className="nav-link text-light">
+                  ChatAI
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
