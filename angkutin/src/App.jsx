@@ -9,7 +9,6 @@ import Welcome from "./components/Welcome/Welcome"
 import Footer from "./components/Footer/Footer"
 import Login from "../src/pages/Login/Login"
 import OrderForm from "./pages/Order/Order"
-// import OrderTable from "./pages/Detail/Detail"
 import LandingPage from "./pages/LandingPage/LandingPage"
 import CreateAccount from "./pages/Create/Create"
 import AboutUs from "./pages/AboutUS/AboutUs"
@@ -17,6 +16,7 @@ import Services from "./pages/Service/Service"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import DetailOrder from "./pages/Detail/Detail"
 import EditOrder from "./pages/Edit/Edit"
+import ChatAI from "./pages/Chat AI/ChatAI"
 
 function App() {
   return (
@@ -31,6 +31,7 @@ function App() {
           <Route path="/order-form" element={<OrderForm />} />
           <Route path="/detail-order" element={<DetailOrder />} />
           <Route path="/edit/:id" element={<EditOrder />} />
+          <Route path="/chatAI" element={<ChatAI />} />
         </Routes>
       </Router>
     </div>

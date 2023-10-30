@@ -12,7 +12,7 @@ const Services = () => {
       <div className="body">
         <h1 className="section-heading">Our Services</h1>
         <p className="section-subheading">
-          Kami dengan bangga menghadirkan berbagai layanan menarik yang <br />{" "}
+          Kami dengan bangga menghadirkan berbagai layanan menarik yang <br />
           dirancang untuk memenuhi kebutuhan pengiriman barang Anda.
         </p>
         <div className="our-contents">

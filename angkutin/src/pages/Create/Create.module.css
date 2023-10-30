@@ -23,8 +23,8 @@
 
  h3 {
    position: relative;
-   left: 35px;
-   top: 10px;
+   /* left: 35px;
+   top: 10px; */
    color: var(--5, #000);
    text-align: left;
    /* H3 */
@@ -71,7 +71,7 @@
  }
 
  h2 {
-   color: #000;
+   /* color: #000; */
    /* H2 */
    font-size: 32px;
    font-family: Plus Jakarta Sans;

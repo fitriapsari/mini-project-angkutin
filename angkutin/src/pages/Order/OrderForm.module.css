@@ -2,7 +2,7 @@ form {
   width: 80%;
   margin: 0 auto;
   margin-top: 20px;
-  max-width: 600px;
+  /* max-width: 600px; */
   background: #f7f7f7;
   padding: 20px;
   border: 1px solid #e0e0e0;
@@ -21,10 +21,10 @@ button detail {
 }
 
 h3 {
-  margin-left: 50px;
-  margin-top: 30px;
+  /* margin-left: 50px;
+  margin-top: 30px; */
   font-size: 18px;
-  text-align: right;
+  /* text-align: right; */
 }
 
 /* button {
