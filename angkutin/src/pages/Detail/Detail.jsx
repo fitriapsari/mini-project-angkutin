@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from "react"
+import { Link } from "react-router-dom"
 import Navbar from "../../components/Navbar/Navbar"
-import { fetchOrders, deleteOrder, editOrder } from "../../api/index"
+import { fetchOrders, deleteOrder } from "../../api/index"
+import { useParams } from "react-router-dom"
 import "./Detail.module.css"
-import data from "../../api/data"
 
 function DetailOrder() {
+  const { id } = useParams()
   const [orders, setOrders] = useState([])
+  const [editingOrder, setEditingOrder] = useState(null)
 
   useEffect(() => {
-    // Mengambil data pesanan
     fetchOrders()
       .then((data) => {
         setOrders(data)
@@ -17,13 +19,40 @@ function DetailOrder() {
         console.error("Gagal mengambil data pesanan: ", error)
       })
   }, [])
-  console.log(data)
 
-  //menghapus pesanan
+  // const saveEditedOrder = () => {
+  //   editOrder(editingOrder.id, editingOrder)
+  //     .then(() => {
+  //       alert("Data Anda berhasil diperbarui!")
+
+  //       setEditingOrder(null)
+
+  //       // Perbarui data pesanan dengan data yang diperbarui
+  //       setOrders((prevOrders) =>
+  //         prevOrders.map((order) =>
+  //           order.id === editingOrder.id ? editingOrder : order
+  //         )
+  //       )
+  //     })
+  //     .catch((error) => {
+  //       console.error("Gagal menyimpan perubahan pesanan: ", error)
+  //     })
+  // }
+
+  const saveEditedOrder = () => {
+    editOrder(editedOrder.id, editedOrder)
+      .then(() => {
+        alert("Data Anda berhasil diperbarui!")
+        window.location.href = "/detail-order"
+      })
+      .catch((error) => {
+        console.error("Gagal menyimpan perubahan pesanan: ", error)
+      })
+  }
+
   const handleDelete = (orderId) => {
     deleteOrder(orderId)
       .then(() => {
-        // Hapus pesanan
         setOrders((prevOrders) =>
           prevOrders.filter((order) => order.id !== orderId)
         )
@@ -38,7 +67,7 @@ function DetailOrder() {
     <div>
       <Navbar />
       <h2>Detail Pesanan Jasa Angkut</h2>
-      <table>
+      <table className="table-striped">
         <thead>
           <tr>
             <th>No</th>
@@ -62,12 +91,7 @@ function DetailOrder() {
               <td>{order.tanggalJemput}</td>
               <td>{order.jenisLayanan}</td>
               <td>
-                <button
-                  onClick={() => editOrder(order.id)}
-                  style={{ backgroundColor: "lightblue" }}
-                >
-                  Edit
-                </button>
+                <Link to={`/edit/${order.id}`}>Edit</Link>
                 <button
                   onClick={() => {
                     const isConfirmed = window.confirm(

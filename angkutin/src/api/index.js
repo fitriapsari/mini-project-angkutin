@@ -2,7 +2,7 @@ import axios from "axios";
 
 const API_URL = "https://6533b018e1b6f4c5904624a2.mockapi.io/order";
 
-// fetch API
+// get data 
 export const fetchOrders = () => {
   return axios
     .get(API_URL)
@@ -40,7 +40,7 @@ export const postOrder = (orderData) => {
 
 export const editOrder = async (orderId, updatedData) => {
   const url = `${API_URL}/${orderId}`;
-
+  console.log(url)
   return axios
     .put(url, updatedData, {
       headers: {
@@ -48,7 +48,7 @@ export const editOrder = async (orderId, updatedData) => {
       }
     })
     .then((response) => {
-      console.log("Data berhasil diubah:", response.data);
+      console.log("Data berhasil diubah:", response);
       return response.data;
     })
     .catch((error) => {
@@ -72,5 +72,25 @@ export const deleteOrder = (orderId) => {
       throw error;
     });
 };
+
+// API.js (misalnya)
+// export const editOrder = (editedOrder) => {
+//   const url = `https://6533b018e1b6f4c5904624a2.mockapi.io/order${editedOrder.id}`; // Sesuaikan dengan URL endpoint Anda
+//   const options = {
+//     method: 'PUT',
+//     headers: {
+//       'Content-Type': 'application/json',
+//     },
+//     body: JSON.stringify(editedOrder), // Kirim pesanan yang telah diubah sebagai JSON
+//   };
+
+//   return fetch(url, options)
+//     .then((response) => {
+//       if (!response.ok) {
+//         throw new Error('Gagal mengedit pesanan');
+//       }
+//       return response.json();
+//     });
+// };
 
 

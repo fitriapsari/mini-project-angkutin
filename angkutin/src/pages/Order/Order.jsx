@@ -21,17 +21,6 @@ const OrderForm = () => {
   // State untuk menyimpan pesanan
   const [orders, setOrders] = useState([])
 
-  // useEffect(() => {
-  //   fetchOrders()
-  //     .then((data) => {
-  //       setOrders(data)
-  //     })
-  //     .catch((error) => {
-  //       console.error("Gagal mengambil data pesanan: ", error)
-  //     })
-  // }, [])
-  // console.log(data)
-
   const handleInputChange = (e) => {
     const { name, value } = e.target
     setOrderForm({
