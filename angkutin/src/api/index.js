@@ -15,15 +15,6 @@ export const fetchOrders = () => {
     });
 };
 
-// export const fetchOrders = () => {
-//   return fetch(`${API_URL}/orders`, {
-//     method: 'GET',
-//     headers: {
-//       'Content-Type': 'application/json'
-//     }
-//   })
-// }
-
 //  mengirim data pesanan ke API
 export const postOrder = (orderData) => {
   return axios
@@ -73,24 +64,5 @@ export const deleteOrder = (orderId) => {
     });
 };
 
-// API.js (misalnya)
-// export const editOrder = (editedOrder) => {
-//   const url = `https://6533b018e1b6f4c5904624a2.mockapi.io/order${editedOrder.id}`; // Sesuaikan dengan URL endpoint Anda
-//   const options = {
-//     method: 'PUT',
-//     headers: {
-//       'Content-Type': 'application/json',
-//     },
-//     body: JSON.stringify(editedOrder), // Kirim pesanan yang telah diubah sebagai JSON
-//   };
-
-//   return fetch(url, options)
-//     .then((response) => {
-//       if (!response.ok) {
-//         throw new Error('Gagal mengedit pesanan');
-//       }
-//       return response.json();
-//     });
-// };
 
 

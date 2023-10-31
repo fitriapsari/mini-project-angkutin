@@ -17,6 +17,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import DetailOrder from "./pages/Detail/Detail"
 import EditOrder from "./pages/Edit/Edit"
 import ChatAI from "./pages/Chat AI/ChatAI"
+// import import.meta.env from "import.meta.env"
 
 function App() {
   return (
