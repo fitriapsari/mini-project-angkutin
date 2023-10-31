@@ -1,18 +1,19 @@
 import React, { useState } from "react"
-// import Button from "../src/components/Chatai/Button"
-// import TextArea from "../src/components/Chatai/TextArea"
+import Button from "./Button"
+import TextArea from "./TextArea"
 import OpenAI from "openai"
 import { ColorRing } from "react-loader-spinner"
-// import Navbar from "../../components/Navbar"
+import Navbar from "../../components/Navbar/Navbar"
 
 const ChatAI = () => {
   const [command, setCommand] = useState("")
   const [loading, setLoading] = useState(false)
   const [result, setResult] = useState("")
 
+  // console.log(import.meta.env.VITE_APP_OPENAI_APIKEY)
   const openai = new OpenAI({
-    apiKey: import.meta.env.REACT_APP_URL_OPENAI_APIKEY,
-    // apikey: "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",
+    apiKey: import.meta.env.VITE_APP_OPENAI_APIKEY,
+    // apiKey: "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",
     dangerouslyAllowBrowser: true,
   })
 
@@ -24,29 +25,29 @@ const ChatAI = () => {
       //   { role: "system", content: "You are a helpful assistant." },
       //   { role: "user", content: command },
       // ],
-      model: "gpt-3.5-turbo",
+      model: "gpt-3.5-turbo-0613",
       prompt: "A summarizing article from this url :" + command,
-      model: "gpt-3.5-turbo",
-      max_tokens: 1000,
+      // max_tokens: 0,
       temperature: 0,
       precence_penalty: 1,
       frequency_penalty: 0.0,
       top_p: 1.0,
     })
+    console.log(res)
     setResult(res.choices[0].message.content)
     setLoading(false)
   }
 
   return (
     <div>
-      {/* <Navbar /> */}
+      <Navbar />
       <TextArea
         name="command"
         id="command"
         value={command}
         onChange={(e) => setCommand(e.target.value)}
         placeholder="Masukkan perintah di sini"
-        className="input"
+        className="textarea"
       />
 
       {loading && (
