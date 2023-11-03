@@ -1,8 +1,27 @@
-import React from "react"
+import React, { useState } from "react"
 import create from "../../assets/create.png"
 import Navbar from "../../components/Navbar/Navbar"
+import { useNavigate } from "react-router-dom"
 
 const Login = () => {
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+  const [error, setError] = useState(null)
+  const navigate = useNavigate()
+
+  const handleClickLogin = (e) => {
+    e.preventDefault()
+
+    if (email === "farah@gmail.com" && password === "fitri16") {
+      localStorage.setItem("email", email)
+      alert("Login Successfully!")
+      navigate("/")
+    } else {
+      alert("Login Failed!")
+      setError("Email or Password is incorrect")
+    }
+  }
+
   return (
     <div>
       <Navbar />
@@ -52,6 +71,8 @@ const Login = () => {
                 placeholder="Enter your email"
                 aria-label="Enter your email"
                 aria-describedby="addon-wrapping"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
             </div>
             <h3>Password</h3>
@@ -62,9 +83,16 @@ const Login = () => {
                 placeholder="Enter your password"
                 aria-label="Enter your password"
                 aria-describedby="addon-wrapping"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
               />
             </div>
-            <button className="btn btn-primary mt-4 border-0" type="submit">
+            {error && <p className="text-danger">{error}</p>}
+            <button
+              className="btn btn-primary mt-4 border-0"
+              type="submit"
+              onClick={handleClickLogin}
+            >
               Login
             </button>
             <div className="input-group-text">

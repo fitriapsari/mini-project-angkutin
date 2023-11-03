@@ -11,6 +11,12 @@
 
 .our-contents {
   display: flex;
+  padding: 20px;
+  margin-left: 120px;
+}
+
+.h2 {
+  margin-top: 10px;
 }
 
 .section-heading {
