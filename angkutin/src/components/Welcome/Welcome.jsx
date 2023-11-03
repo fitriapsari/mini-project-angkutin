@@ -12,7 +12,6 @@ const Angkutin = () => {
         <div className="bubble">
           <div className="bubbledesc">
             <h1>Solusi buat kamu yang mager pindahan</h1>
-            {/* <h3>angkutin</h3> */}
             <h2>#Kebut Yahut</h2>
             <button>
               <Link to="/order-form">Pesan Sekarang</Link>

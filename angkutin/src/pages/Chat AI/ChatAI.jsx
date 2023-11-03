@@ -26,7 +26,7 @@ const ChatAI = () => {
         { role: "user", content: command },
       ],
       model: "gpt-3.5-turbo",
-      // prompt: "A summarizing article from this url :" + command,
+      // prompt: "layanan jasa angkut barang :" + command,
       max_tokens: 1000,
       temperature: 0,
       // precence_penalty: 1,

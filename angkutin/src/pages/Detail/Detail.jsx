@@ -10,6 +10,7 @@ function DetailOrder() {
   const [orders, setOrders] = useState([])
   const [editingOrder, setEditingOrder] = useState(null)
 
+  // get data baru
   useEffect(() => {
     fetchOrders()
       .then((data) => {
@@ -20,6 +21,7 @@ function DetailOrder() {
       })
   }, [])
 
+  // fungsi untuk mengedit data
   const saveEditedOrder = () => {
     editOrder(editedOrder.id, editedOrder)
       .then(() => {
@@ -31,6 +33,7 @@ function DetailOrder() {
       })
   }
 
+  // fungsi untuk menghapus data
   const handleDelete = (orderId) => {
     deleteOrder(orderId)
       .then(() => {
