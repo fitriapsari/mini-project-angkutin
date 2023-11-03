@@ -31,10 +31,10 @@ const Footer = () => {
           <div className="content">
             <h1 className="footer-title">AboutUs</h1>
             <p className="isiAboutUs">
-              Pindah adalah perusahaan yang menyediakan layanan pindahan rumah
-              kantor yang terpercaya. Kami memahami bahwa pindahan bisa
-              melelahkan dan memakan waktu, jadi kami siap membantu Anda
-              memindahkan barang dengan mudah dan efisien.
+              Angkutin merupaka penyediakan layanan pindahan rumah, kantor yang
+              terpercaya. Kami memahami bahwa pindahan bisa melelahkan dan
+              memakan waktu, jadi kami siap membantu Anda memindahkan barang
+              dengan mudah dan efisien.
             </p>
           </div>
           <div className="content">

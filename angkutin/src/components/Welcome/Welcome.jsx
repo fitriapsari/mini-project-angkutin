@@ -34,8 +34,8 @@ const Angkutin = () => {
               mendapatkan layanan pindahan yang bebas stres, profesional, aman,
               dan terjangkau. Kami menawarkan berbagai layanan termasuk
               penyewaan kendaraan, tenaga bantuan, terpal dan pertanggungan
-              asuransi. Pemesanan dapat dilakukan melalui situs web dan aplikasi
-              seluler kami yang ramah pengguna.
+              asuransi. Pemesanan dapat dilakukan melalui situs web kami yang
+              ramah pengguna.
             </p>
           </div>
         </div>
