@@ -38,6 +38,8 @@ const CreateAccount = () => {
         username
       )
       navigate("/login")
+      setError(null)
+      alert("Pendaftaran berhasil!")
     } catch (firebaseError) {
       const errorMessage = firebaseError.message
       setError(errorMessage)
