@@ -1,49 +1,8 @@
 {
-  "framework": "react",
-  "build": {
-    "command": "npm run build",
-    "ignore": [
-      "node_modules",
-      ".git",
-      ".vercel"
-    ]
-  },
-  "routes": [
+  "rewrites": [
     {
-      "source": "/",
-      "destination": "/pages/landing-page"
-    },
-    {
-      "source": "/login",
-      "destination": "/pages/login"
-    },
-    {
-      "source": "/signup",
-      "destination": "/pages/signup"
-    },
-    {
-      "source": "/about",
-      "destination": "/pages/about-us"
-    },
-    {
-      "source": "/service",
-      "destination": "/pages/services"
-    },
-    {
-      "source": "/order-form",
-      "destination": "/pages/order-form"
-    },
-    {
-      "source": "/detail-order",
-      "destination": "/pages/detail-order"
-    },
-    {
-      "source": "/edit/:id",
-      "destination": "/pages/edit-order/$2"
-    },
-    {
-      "source": "/chatAI",
-      "destination": "/pages/chat-ai"
+      "source": "/(.*)",
+      "destination": "/"
     }
   ]
 }
