@@ -20,25 +20,6 @@ function DetailOrder() {
       })
   }, [])
 
-  // const saveEditedOrder = () => {
-  //   editOrder(editingOrder.id, editingOrder)
-  //     .then(() => {
-  //       alert("Data Anda berhasil diperbarui!")
-
-  //       setEditingOrder(null)
-
-  //       // Perbarui data pesanan dengan data yang diperbarui
-  //       setOrders((prevOrders) =>
-  //         prevOrders.map((order) =>
-  //           order.id === editingOrder.id ? editingOrder : order
-  //         )
-  //       )
-  //     })
-  //     .catch((error) => {
-  //       console.error("Gagal menyimpan perubahan pesanan: ", error)
-  //     })
-  // }
-
   const saveEditedOrder = () => {
     editOrder(editedOrder.id, editedOrder)
       .then(() => {

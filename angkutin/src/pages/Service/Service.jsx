@@ -31,16 +31,18 @@ const Services = () => {
             </div>
           </div>
           <div className="our-content">
-            <div className="card mt-3 mx-3" style={{ width: "18rem" }}>
+            <div
+              className="card mt-3 mx-3"
+              style={{ width: "18rem", padding: "30px" }}
+            >
               <img src={Packing} className="card-img-top" alt="Service 2" />
               <div className="card-body">
                 <h2> Packing </h2>
                 <p className="card-text">
                   Kami menyediakan layanan kemasan barang yang aman dan
-                  terpercaya untuk memastikan barang Anda tetap dalam kondisi
-                  baik selama pengiriman.
+                  terpercaya untuk memastikan barang Anda dalam kondisi baik
+                  selama pengiriman.
                 </p>
-                <br />
                 <b>
                   Harga: Rp150.000 - Rp300.000 Sesuai Banyak dan Diameter Barang
                 </b>
