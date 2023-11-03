@@ -8,8 +8,10 @@ const Footer = () => {
           <div className="content">
             <h1 className="footer-title">Angkutin</h1>
             <p className="isiAngkutin">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet
-              eaque harum cum ea blanditiis ex molestias officiis
+              Angkutin merupakan penyedia jasa pindahan dan angkut barang yang
+              menyediakan layanan yang efisien, handal, dan mudah digunakan
+              untuk mengatasi masalah transportasi dan pencarian layanan jasa
+              pindahan.{" "}
             </p>
             <div className="mediaSosial">
               <a href="#">
@@ -29,10 +31,10 @@ const Footer = () => {
           <div className="content">
             <h1 className="footer-title">AboutUs</h1>
             <p className="isiAboutUs">
-              Angkutin merupakan penyedia jasa pindahan dan angkut barang yang
-              menyediakan layanan yang efisien, handal, dan mudah digunakan
-              untuk mengatasi masalah transportasi dan pencarian layanan jasa
-              pindahan.
+              Pindah adalah perusahaan yang menyediakan layanan pindahan rumah
+              kantor yang terpercaya. Kami memahami bahwa pindahan bisa
+              melelahkan dan memakan waktu, jadi kami siap membantu Anda
+              memindahkan barang dengan mudah dan efisien.
             </p>
           </div>
           <div className="content">
